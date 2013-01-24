@@ -1,0 +1,8 @@
+#+TITLE: Testing man export here
+
+* NAME
+hi-moon - says [[Hello moon]] Can you believe it?
+
+* Hello worldk
+* Hello sun
+* Hello moon

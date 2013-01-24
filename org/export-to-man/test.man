@@ -1,0 +1,11 @@
+.TH "Testing man export here" "1"
+
+.SH "NAME"
+.PP
+hi-moon - says \fIHello moon\fP Can you believe it?
+.SH "Hello world"
+nil
+.SH "Hello sun"
+nil
+.SH "Hello moon"
+nil

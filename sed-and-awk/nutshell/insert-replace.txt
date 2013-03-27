@@ -1,0 +1,7 @@
+Here, something should be inserted:
+<insert-here>
+
+Below <append-here>, there should be something appended:
+
+Whereas this stuff here, should be replaced:
+<replace-here>

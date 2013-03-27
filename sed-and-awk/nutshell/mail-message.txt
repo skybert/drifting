@@ -1,0 +1,5 @@
+From: donald@duck.com
+Subject: hello world
+
+Hi there, this is the real message.  Hi there, this is the real
+message.

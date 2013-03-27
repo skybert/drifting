@@ -1,0 +1,8 @@
+.XX This is a heading
+Hello world, how are you doing?
+Hello world, how are you doing?
+Hello world, how are you doing?
+
+.XX This is another heading
+Hello world, how are you doing?
+Hello world, how are you doing?

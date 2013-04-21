@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="http://wicket.apache.org">
+  <head>
+    <meta name="author" content="Torstein Krause Johansen"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="http://skybert.net/style/skybert.css" /> 
+    <title>
+      Product Catalogue
+    </title>
+  </head>
+  <body>
+    <h1>Product Catalogue</h1>
+    <div style="float: right; border: thin dotted black; padding: 1em;">
+      <a wicket:id="login">Login</a>
+      <a wicket:id="logout">Logout</a>
+    </div>
+    <div wicket:id="feedback"></div>
+    <ul wicket:id="productList">
+      <li wicket:id="id"></li>
+      <li><a wicket:id="link"><span wicket:id="name"></span></a></li>
+      <li wicket:id="price"></li>
+    </ul>
+  </body>
+</html>
+

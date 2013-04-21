@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.TDD"
+>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="http://wicket.apache.org">
+  <head>
+    <meta name="author" content="Torstein Krause Johansen"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UT-8"/>
+    <link rel="stylesheet" type="text/css" href="http://skybert.net/style/skybert.css" /> 
+    <title>
+      Login Page
+    </title>
+  </head>
+  <body>
+    <h1>Login page</h1>
+    <div wicket:id="feedback"></div>
+    <form wicket:id="form">
+      <div>
+        User: <input wicket:id="userName" type="text"/>
+        Password <input wicket:id="password" type="password"/>
+        <input type="submit" value="Login"/>
+      </div>
+    </form>
+  </body>
+</html>
+

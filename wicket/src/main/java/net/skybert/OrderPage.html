@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="http://wicket.apache.org">
+  <head>
+    <meta name="author" content="Torstein Krause Johansen"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="/style/skybert.css" />
+    <title>
+      OrderPage
+    </title>
+  </head>
+  <body>
+    <h1>OrderPage</h1>
+    <div wicket:id="feedback"></div>
+    <form wicket:id="form">
+      <div>
+        Customer ID: <input wicket:id="customerId"/>
+        Customer Name: <span wicket:id="customerName"/>
+      </div>
+      <table>
+        <tr>
+          <th>Product ID</th>
+          <th>Product name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Sum</th>
+        </tr>
+        <tr wicket:id="eachProductItem">
+          <td wicket:id="productId"></td>
+          <td wicket:id="productName"></td>
+          <td wicket:id="price"></td>
+          <td wicket:id="quantity"></td>
+          <td wicket:id="sum"></td>
+        </tr>
+        <tr>
+          <td colspan="3" wicket:id="total"></td>
+        </tr>
+      </table>
+      <!--
+      <div>
+        <input type="submit" value="OK"/>
+        <input type="submit" value="Pay"/>
+        <input type="submit" value="Cancel"/>
+      </div>
+      -->
+    </form>
+  </body>
+</html>

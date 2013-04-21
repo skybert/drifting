@@ -1,20 +1,18 @@
 package net.skybert.model;
 
-import net.skybert.service.CustomerService;
-
 import org.apache.wicket.model.IModel;
 
 /**
- * CustomerIdModel
+ * ProductIdModel
  *
  * @author <a href="mailto:tkj@conduct.no">Torstein Krause Johansen</a>
  * @version 1.0
  */
-public final class CustomerIdModel extends ObjectIdModel<Integer, Customer> {
+public final class ProductIdModel extends ObjectIdModel<Integer, Customer> {
   private static final long serialVersionUID = 1L;
-  private CustomerService customerService;
+  private ProductService customerService;
 
-  public CustomerIdModel(final CustomerService pCustomerService,
+  public ProductIdModel(final ProductService pCustomerService,
       final IModel<Customer> pCustomerModel) {
     super(pCustomerModel);
     customerService = pCustomerService;

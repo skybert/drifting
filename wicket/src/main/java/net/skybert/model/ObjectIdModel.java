@@ -35,7 +35,9 @@ public abstract class ObjectIdModel<K, T> implements IModel<K> {
       objectModel.detach();
   }
 
-  protected abstract String getIdPropertyName();
+  protected String getIdPropertyName() {
+      return "id";
+  }
 
   protected abstract T get(K id);
 

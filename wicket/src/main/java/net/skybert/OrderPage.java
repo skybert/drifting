@@ -57,10 +57,10 @@ public class OrderPage extends WebPage {
 
     CustomerIdModel customerIdModel = new CustomerIdModel(WicketApplication
         .get().getCustomerService(), customerModel);
-    TextField<String> customerIdField = new TextField<>("customerId",
+    TextField<Integer> customerIdField = new TextField<Integer>("customerId",
         customerIdModel);
     customerIdField.setRequired(true);
-
+    
     customerIdField.add(new AjaxFormComponentUpdatingBehavior("onkeyup") {
       private static final long serialVersionUID = 1L;
 

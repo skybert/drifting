@@ -4,8 +4,8 @@ import javax.jms.Destination;
 import javax.jms.JMSException;
 
 /**
- * A topic consumer, which doesn't get any messages sent while it was offline.
- * 
+ * A topic consumer which only gets messages broadcasted while it's online.
+ *
  * @author <a href="mailto:tkj@conduct.no">Torstein Krause Johansen</a>
  * @version 1.0
  */

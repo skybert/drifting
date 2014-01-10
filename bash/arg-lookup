@@ -1,0 +1,29 @@
+#! /usr/bin/env bash
+
+arg_help=""
+arg_debug=""
+argv_name=""
+argv_age=""
+
+function get_user_switch_options() {
+  declare | grep ^arg_ | while read f; do
+    arg=$(echo $f | sed 's/arg_\(.*\)=/\1/')
+    echo "--${arg}"
+  done
+}
+
+function get_user_value_options() {
+  declare | grep ^argv_ | while read f; do
+    arg=$(echo $f | sed 's/argv_\(.*\)=/\1/')
+    echo "--${arg} <${arg}>"
+  done
+}
+
+function print_user_options() {
+  echo "The following options are available:"
+  get_user_switch_options
+  get_user_value_options
+}
+
+
+print_user_options

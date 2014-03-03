@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+
+cp=/opt/jboss-eap-6.2.0.GA-maven-repository/org/jboss/as/jboss-as-client-all/7.3.0.Final-redhat-14/jboss-as-client-all-7.3.0.Final-redhat-14.jar:.
+
+javac -cp $cp  RemoteJNDILookup.java
+
+java -cp $cp RemoteJNDILookup $1
+
+

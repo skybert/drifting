@@ -13,7 +13,7 @@
       <property name="hibernate.ejb.naming_strategy"
                 value="org.hibernate.cfg.ImprovedNamingStrategy"/>
       <property name="hibernate.dialect"
-                value="org.hibernate.dialect.MySQL5Dialect"/>
+                value="org.hibernate.dialect.HSQLDialect"/>
     </properties>
   </persistence-unit>
 </persistence>

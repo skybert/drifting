@@ -10,29 +10,34 @@ import javax.validation.constraints.NotNull;
 import javax.persistence.Entity;
 
 @Entity
-public class Tribe {
+public class Tribe
+{
 
-    @Id
-    @NotNull
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+  @Id
+  @NotNull
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
 
-    private String name;
+  private String name;
 
-    public Integer getId() {
-        return id;
-    }
+  public Integer getId()
+  {
+    return id;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public String getName()
+  {
+    return name;
+  }
 
-    public void setName(final String pName) {
-        name = pName;
-    }
+  public void setName(final String pName)
+  {
+    name = pName;
+  }
 
-    public String toString() {
-        return getClass().getName() + "[" + " id=" + getId() + " name="
-                + getName() + "]";
-    }
+  public String toString()
+  {
+    return getClass().getName() + "[" + " id=" + getId() + " name=" + getName()
+        + "]";
+  }
 }

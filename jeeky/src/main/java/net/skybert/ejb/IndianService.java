@@ -4,7 +4,8 @@ import javax.ejb.Local;
 import net.skybert.data.*;
 
 @Local
-public interface IndianService {
+public interface IndianService
+{
 
-    public long create(Indian indian);
+  public long create(Indian indian);
 }

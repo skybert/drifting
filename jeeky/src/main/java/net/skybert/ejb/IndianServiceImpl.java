@@ -7,13 +7,15 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 @Stateless
-public class IndianServiceImpl implements IndianService {
+public class IndianServiceImpl implements IndianService
+{
 
-    @PersistenceContext
-    private EntityManager entityManager;
+  @PersistenceContext
+  private EntityManager entityManager;
 
-    public long create(Indian indian) {
-        entityManager.persist(indian);
-        return indian.getId();
-    }
+  public long create(Indian indian)
+  {
+    entityManager.persist(indian);
+    return indian.getId();
+  }
 }

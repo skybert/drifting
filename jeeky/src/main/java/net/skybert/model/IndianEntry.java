@@ -9,21 +9,24 @@ import net.skybert.ejb.IndianService;
 import net.skybert.data.*;
 
 @Model
-public class IndianEntry implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class IndianEntry implements Serializable
+{
+  private static final long serialVersionUID = 1L;
 
-    @Named
-    @Produces
-    private Indian indian = new Indian();
-    @Inject
-    IndianService service;
+  @Named
+  @Produces
+  private Indian indian = new Indian();
+  @Inject
+  IndianService service;
 
-    public long create() {
-        return create(indian);
-    }
+  public long create()
+  {
+    return create(indian);
+  }
 
-    public long create(final Indian pIndian) {
-        return service.create(pIndian);
-    }
+  public long create(final Indian pIndian)
+  {
+    return service.create(pIndian);
+  }
 
 }

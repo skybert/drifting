@@ -16,6 +16,8 @@ public class IndianEntry implements Serializable
   @Named
   @Produces
   private Indian indian = new Indian();
+
+  @Named
   @Inject
   IndianService service;
 

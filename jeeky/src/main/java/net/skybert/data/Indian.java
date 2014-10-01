@@ -13,7 +13,6 @@ import javax.persistence.Entity;
 public class Indian
 {
   @Id
-  @NotNull
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
 
@@ -33,6 +32,11 @@ public class Indian
     return name;
   }
 
+  public void setName(String name)
+  {
+    this.name = name;
+  }
+
   public Tribe getTribe()
   {
     return tribe;
@@ -40,7 +44,7 @@ public class Indian
 
   public String toString()
   {
-    return getClass().getName() + "[" + " id=" + getId() + " name=" + getName()
+    return getClass().getName() + "[" + "id=" + getId() + " name=" + getName()
         + "]";
   }
 

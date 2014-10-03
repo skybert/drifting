@@ -6,8 +6,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotNull;
-import javax.persistence.Entity;
 
 @Entity
 public class Indian
@@ -35,6 +33,11 @@ public class Indian
   public void setName(String name)
   {
     this.name = name;
+  }
+
+  public void setTribe(Tribe tribe)
+  {
+    this.tribe = tribe;
   }
 
   public Tribe getTribe()

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC
-          "-//W3C//DTD XHTML 1.0 Strict//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-          >
+"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
@@ -10,8 +10,13 @@
   <h:head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>JEEky :: in here be Indians</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://skybert.net/theme/styles/skybert.css"/>
   </h:head>
-
+  indians=[#{allIndians}]
+  tribes=[#{allTribes}]
   <h:body>
 
     <ui:fragment rendered="#{indian.id eq null}">
@@ -19,19 +24,33 @@
         <p>
           <h:outputLabel value="Name:" for="name"/>
           <h:inputText
-             id="name"
-             value="#{indian.name}"
-             required="true"
-             requiredMessage="An indian must have a name, ugh!"
-             />
+            id="name"
+            value="#{indian.name}"
+            required="true"
+            requiredMessage="An indian must have a name, ugh!"
+            />
           <h:message for="name" showDetail="true"/>
+          &nbsp;
+          <h:outputLabel value="Tribe:" for="tribe"/>
+          <h:selectOneMenu
+            id="tribe"
+            value="#{indian.tribe}"
+            converter="#{tribeConverter}"
+            >
+            <f:selectItems
+              value="#{allTribes}"
+              var="tribe"
+              itemValue="#{tribe}"
+              itemLabel="#{tribe.name}"/>
+          </h:selectOneMenu>
+          <h:message for="tribe" showDetail="true"/>
         </p>
         <p>
           <h:commandButton
-             id="save"
-             value="Save"
-             action="#{indianEntry.create}"
-             />
+            id="save"
+            value="Save"
+            action="#{indianEntry.create}"
+            />
         </p>
       </h:form>
     </ui:fragment>

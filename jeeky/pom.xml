@@ -27,6 +27,11 @@
       <version>1.0.0.GA-redhat-2</version>
     </dependency>
     <dependency>
+      <groupId>javax.faces</groupId>
+      <artifactId>jsf-api</artifactId>
+      <version>1.2_15-b01-redhat-8</version>
+    </dependency>
+    <dependency>
       <groupId>org.jboss.spec.javax.ejb</groupId>
       <artifactId>jboss-ejb-api_3.1_spec</artifactId>
       <version>1.0.2.Final-redhat-2</version>

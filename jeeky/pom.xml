@@ -46,6 +46,11 @@
       <artifactId>cdi-api</artifactId>
       <version>1.0-SP4.redhat-3</version>
     </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.14.8</version>
+    </dependency>
   </dependencies>
 
   <build>

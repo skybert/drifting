@@ -7,6 +7,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
+@ToString
+@EqualsAndHashCode
 @Entity
 public class Indian
 {
@@ -43,12 +48,6 @@ public class Indian
   public Tribe getTribe()
   {
     return tribe;
-  }
-
-  public String toString()
-  {
-    return getClass().getName() + "[" + "id=" + getId() + " name=" + getName()
-        + "]";
   }
 
 }

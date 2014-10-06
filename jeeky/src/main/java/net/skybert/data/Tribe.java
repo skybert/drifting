@@ -6,10 +6,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
+@ToString
+@EqualsAndHashCode
 @Entity
 public class Tribe
 {
-
   @Id
   @NotNull
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,9 +36,4 @@ public class Tribe
     name = pName;
   }
 
-  public String toString()
-  {
-    return getClass().getName() + "[" + " id=" + getId() + " name=" + getName()
-        + "]";
-  }
 }

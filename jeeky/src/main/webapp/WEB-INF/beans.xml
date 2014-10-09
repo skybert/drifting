@@ -6,7 +6,7 @@
       http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
 
    <interceptors>
-      <class>net.skybert.interceptor.Logger</class>
+      <class>net.skybert.interceptor.Sauron</class>
    </interceptors>
 
 </beans>

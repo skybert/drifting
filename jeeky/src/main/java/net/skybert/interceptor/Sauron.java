@@ -8,7 +8,7 @@ import javax.interceptor.InvocationContext;
 
 @Logged
 @Interceptor
-public class Logger implements Serializable
+public class Sauron implements Serializable
 {
   private static final long serialVersionUID = 1L;
 

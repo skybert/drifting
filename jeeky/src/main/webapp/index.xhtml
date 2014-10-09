@@ -15,9 +15,10 @@
       type="text/css"
       href="http://skybert.net/theme/styles/skybert.css"/>
   </h:head>
-  indians=[#{allIndians}]
-  tribes=[#{allTribes}]
+
   <h:body>
+
+    <h1>JEEky :: in here be Indians</h1>
 
     <ui:fragment rendered="#{indian.id eq null}">
       <h:form>
@@ -30,6 +31,13 @@
             requiredMessage="An indian must have a name, ugh!"
             />
           <h:message for="name" showDetail="true"/>
+          &nbsp;
+          <h:outputLabel value="Age:" for="age"/>
+          <h:inputText
+            id="age"
+            value="#{indian.age}"
+            />
+          <h:message for="age" showDetail="true"/>
           &nbsp;
           <h:outputLabel value="Tribe:" for="tribe"/>
           <h:selectOneMenu
@@ -54,6 +62,20 @@
         </p>
       </h:form>
     </ui:fragment>
+
+    <h2>Indians gathered here</h2>
+
+
+    <h:dataTable value="#{allIndians}" var="anIndian">
+      <h:column>
+        <f:facet name="header">Indian name</f:facet>
+        #{anIndian.name}
+      </h:column>
+      <h:column>
+        <f:facet name="header">Tribe</f:facet>
+        #{anIndian.tribe.name}
+      </h:column>
+    </h:dataTable>
   </h:body>
 
 </html>

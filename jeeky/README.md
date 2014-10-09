@@ -6,8 +6,10 @@ like:
 
 ## Serious Java EE stuff
 - Conversation scope
-- EJBs
 - JMS
+
+## EJBs
+- Securing method calls
 
 ## CDI
 - Own annotations
@@ -16,7 +18,8 @@ like:
 - Decorators
 
 ## Persistence
-- JPA
+- (x) JPA
+- (x) Enums
 - (x) MySQL
 - In-memory database for interactive and automatic testing.
 
@@ -25,7 +28,10 @@ like:
 - JSF
 - JSF templates
 - JSF Validators
-- JSF Converters
+- (x) JSF Converters
+- Resource bundles, language, strings.
+- Securing the web application
+- Navigation from one XHTML to another
 
 ## Web services
 - JAX-RS
@@ -74,3 +80,29 @@ from indian i", Indian.class);
 > declared on a business interface of Session bean
 > [class net.skybert.ejb.IndianServiceImpl with qualifiers [@Any @Default];
 > local interfaces are [IndianService]
+
+I had declared the method in the impl class (the EJB), but not in the
+interface (the Local interface).
+
+---
+
+> javax.servlet.ServletException: HV000030: No validator could be
+> found for type: java.lang.Integer.
+> javax.faces.webapp.FacesServlet.service(FacesServlet.java:606)
+
+
+----
+When you have @Produces on a method bean, the return type in that
+class must be unique within the class.
+
+---
+
+> Caused by: java.lang.IllegalArgumentException: Named query not found: select i from Indian i where i.tribe.name = :tribeName
+>   at org.hibernate.ejb.AbstractEntityManagerImpl.createNamedQuery(AbstractEntityManagerImpl.java:665) [hibernate-entitymanager-4.2.7.SP1-redhat-3.jar:4.2.7.SP1-redhat-3]
+>   at org.jboss.as.jpa.container.AbstractEntityManager.createNamedQuery(AbstractEntityManager.java:79) [jboss-as-jpa-7.3.0.Final-redhat-14.jar:7.3.0.Final-redhat-14]
+>   at net.skybert.ejb.IndianServiceImpl.getIndiansByTribeName(IndianServiceImpl.java:89) [classes:]
+
+I did:
+    TypedQuery<Tribe> query = entityManager.createNamedQuery("...");
+instead of:
+    TypedQuery<Tribe> query = entityManager.createQuery("....");

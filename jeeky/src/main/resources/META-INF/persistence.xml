@@ -4,16 +4,16 @@
   <persistence-unit name="jeeky-ds" transaction-type="JTA">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <jta-data-source>java:/db/jeekydb</jta-data-source>
-
     <class>net.skybert.data.Tribe</class>
     <class>net.skybert.data.Indian</class>
 
     <properties>
-      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.hbm2ddl.auto" value="create"/>
       <property name="hibernate.ejb.naming_strategy"
                 value="org.hibernate.cfg.ImprovedNamingStrategy"/>
       <property name="hibernate.dialect"
                 value="org.hibernate.dialect.MySQL5Dialect"/>
+      <property name="hibernate.show_sql" value="true"/>
     </properties>
   </persistence-unit>
 </persistence>

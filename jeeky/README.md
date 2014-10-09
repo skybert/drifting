@@ -37,8 +37,10 @@ like:
 - JAX-RS
 
 ## Testing
-- Unit testing with Arquillian
-- Automatic stating with Selenium
+- (x) Unit testing with Arquillian
+- Automatic testing with Drone
+- Automatic testing with Selenium
+- Unit testing with an in-memory database
 
 ## Problems & solutions
 

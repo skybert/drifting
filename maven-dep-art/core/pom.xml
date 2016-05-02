@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  >
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>net.skybert</groupId>
+    <artifactId>maven-dep-art</artifactId>
+    <version>0.1</version>
+  </parent>
+
+  <artifactId>core</artifactId>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit-dep</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>bsf</groupId>
+      <artifactId>bsf</artifactId>
+    </dependency>
+  </dependencies>
+</project>

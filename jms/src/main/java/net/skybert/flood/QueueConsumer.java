@@ -5,9 +5,9 @@ import javax.jms.JMSException;
 import javax.jms.MessageConsumer;
 
 /**
- * A client which picks messages off a queue (or "consumes a queue" in
- * JMS parlance).
- *
+ * A client which picks messages off a queue (or "consumes a queue" in JMS
+ * parlance).
+ * 
  * @author <a href="mailto:tkj@conduct.no">Torstein Krause Johansen</a>
  * @version 1.0
  */

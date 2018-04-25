@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    >
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.skybert</groupId>
+  <artifactId>mvn-test-log</artifactId>
+  <packaging>jar</packaging>
+  <version>0.1</version>
+
+  <dependencies>
+    <dependency>
+      <artifactId>log4j</artifactId>
+      <groupId>log4j</groupId>
+      <version>1.2.17</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.7</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
